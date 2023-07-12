@@ -2,16 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 import pprint
 
-
-    
-# url = "https://www.vox.com/technology/archives/1"
-# r = requests.get(url)
-# soup = BeautifulSoup(r.text, "html.parser")
-# title = soup.find_all(class_="c-entry-box--compact__title")
-# print(title)
-
-
-
 def vox():
     results = []
     for page in range(1, 16):
@@ -41,18 +31,3 @@ def vox():
 
 v = vox()
 pprint.pp(v)
-
-
-# title = soup.find(class_="c-entry-box--compact__title")
-# pprint.pp(title.text)
-
-
-# link = title.a["href"]
-# print(link)
-# # author_link = soup.find("span", class_="c-byline__item").a["href"]
-# # print(author_link)
-# author = soup.find("span", class_="c-byline__item").find(class_="c-byline__author-name")
-# print(author.text)
-# date = soup.find("time", class_="c-byline__item").string.strip()
-# print(date)
-
